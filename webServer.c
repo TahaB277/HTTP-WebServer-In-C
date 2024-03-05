@@ -73,7 +73,7 @@ int main(){
         char method[BUFFER_SIZE], uri[BUFFER_SIZE], version[BUFFER_SIZE];
         sscanf(Buffer, "%s %s %s", method, uri, version);
         printf("[%s:%u] %s %s %s\n", inet_ntoa(clientAddress.sin_addr), ntohs(clientAddress.sin_port), method, version, uri);
-        // 1st fct converts to string, 2nd opposite of hton
+        //-------------------- 1st fct converts to string, 2nd opposite of hton
         // Writing to the socket
         int WriteVal = write(fileDescriptor, toSend, strlen(toSend));
         if (WriteVal < 0){
